@@ -53,6 +53,9 @@ tests:
       python_version: ${{ python_min }}
   - script:
       - deepsearch --help
+    requirements:
+      run:
+        - python ${{ python_min }}
 
 about:
   summary: Interact with the Deep Search platform for new knowledge explorations and discoveries
