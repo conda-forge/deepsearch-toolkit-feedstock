@@ -1,6 +1,6 @@
 context:
   name: deepsearch-toolkit
-  version: 1.1.1
+  version: 2.0.0
   python_min: "3.9"
 
 package:
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/deepsearch_toolkit-${{ version }}.tar.gz
-  sha256: 0777d26b80ae97f773d2c832288cadcfcb874ca1cf11b8284f03a25c8dd013e0
+  sha256: e6fd9ce197e0dd59383e85480b43cc07ed90329bac59ed2fdb0aaa73943bd985
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: python -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -21,7 +21,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - poetry-core
     - pip
   run:
@@ -41,8 +41,8 @@ requirements:
     - tqdm >=4.64.0,<5.0.0
     - docling-core >=2.0.0,<3.0.0
   run_constraints:
-    - fastapi >=0.112.0,<1.0.0
-    - uvicorn >=0.30.5,<1.0.0
+    - fastapi >=0.115.3,<1.0.0
+    - uvicorn >=0.32.0,<1.0.0
     - anyio >=3.6.2,<4.0.0
 
 tests:
@@ -50,12 +50,12 @@ tests:
       imports:
         - deepsearch
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version: ${{ python_min }}.*
   - script:
       - deepsearch --help
     requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
 
 about:
   summary: Interact with the Deep Search platform for new knowledge explorations and discoveries
