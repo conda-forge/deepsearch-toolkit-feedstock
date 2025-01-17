@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/deepsearch_toolkit-${{ version }}.tar.gz
-  sha256: 0777d26b80ae97f773d2c832288cadcfcb874ca1cf11b8284f03a25c8dd013e0
+  sha256: e6fd9ce197e0dd59383e85480b43cc07ed90329bac59ed2fdb0aaa73943bd985
 
 build:
   number: 0
