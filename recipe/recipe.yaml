@@ -1,6 +1,6 @@
 context:
   name: deepsearch-toolkit
-  version: 2.0.0
+  version: "2.0.1"
   python_min: "3.9"
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/deepsearch_toolkit-${{ version }}.tar.gz
-  sha256: e6fd9ce197e0dd59383e85480b43cc07ed90329bac59ed2fdb0aaa73943bd985
+  sha256: cd1ec59f42e2de4f240e5969f064a93f8f95b3bfb9add891d172907970cd9b38
 
 build:
   number: 0
